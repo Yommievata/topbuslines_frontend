@@ -21,7 +21,7 @@ const BusStopList = ({ topBusLines }) => {
   useEffect(() => {
     const fetchBusStops = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/buslines/all?topBusLines=${topBusLines}`);
+        const response = await axios.get(`http://localhost:8080/api/lines/all?topBusLines=${topBusLines}`);
 
         setBusStops(response.data);
       } catch (error) {
